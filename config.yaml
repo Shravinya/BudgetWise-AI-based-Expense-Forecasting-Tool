@@ -1,0 +1,84 @@
+# Configuration file for Budget Tool MVP
+
+# Project Paths
+project_root: "."
+data_dir: "data"
+artifacts_dir: "artifacts"
+models_dir: "artifacts/models"
+features_dir: "features"
+recommendations_dir: "recommendations"
+logs_dir: "logs"
+
+# Data Paths
+raw_dataset: "data/budgetwise_finance_dataset.csv"
+train_path: "artifacts/train.csv"
+val_path: "artifacts/val.csv"
+test_path: "artifacts/test.csv"
+train_processed: "artifacts/train_processed.csv"
+val_processed: "artifacts/val_processed.csv"
+test_processed: "artifacts/test_processed.csv"
+train_engineered: "artifacts/train_engineered.csv"
+val_engineered: "artifacts/val_engineered.csv"
+test_engineered: "artifacts/test_engineered.csv"
+
+# Model Parameters
+baseline:
+  linear_regression: {}
+  arima_order: [1, 1, 1]
+  prophet:
+    daily_seasonality: false
+    weekly_seasonality: true
+    yearly_seasonality: true
+
+ml_models:
+  random_forest:
+    n_estimators: 100
+    random_state: 42
+  xgboost:
+    n_estimators: 100
+    random_state: 42
+  lightgbm:
+    n_estimators: 100
+    random_state: 42
+    verbose: -1
+
+dl_models:
+  sequence_length: 3
+  epochs: 50
+  batch_size: 32
+  lstm_units: 50
+  gru_units: 50
+  bilstm_units: 50
+  learning_rate: 0.001
+
+transformers:
+  sequence_length: 12
+  epochs: 50
+  batch_size: 32
+  d_model: 64
+  nhead: 4
+  num_layers: 2
+
+# Evaluation Metrics
+metrics:
+  mae: "mean_absolute_error"
+  rmse: "root_mean_squared_error"
+  mape: "mean_absolute_percentage_error"
+  directional_accuracy: true
+
+# App Configuration
+app:
+  port: 8501
+  host: "0.0.0.0"
+  forecast_horizon_default: 3
+  high_risk_threshold: 30.0
+
+# Logging
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/budget_tool.log"
+
+# Environment
+env: "development"  # Options: development, production
+debug: true
