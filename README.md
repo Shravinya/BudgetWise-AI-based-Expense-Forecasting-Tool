@@ -1,11 +1,30 @@
 # 💰 Budget Tool
 
-Budget Tool is a comprehensive personal finance management application built with Python and Streamlit. This tool allows users to upload their transaction data, automatically preprocess it, generate exploratory data analysis (EDA), forecast future expenses using advanced ML and DL models, and provide AI-driven budget optimization recommendations. The system supports multiple forecasting models including baseline models like Prophet and ARIMA, machine learning models such as Random Forest, XGBoost, and LightGBM, deep learning models like LSTM, GRU, Bi-LSTM, and even Transformer-based architectures. Users can interact with the application through an intuitive Streamlit interface, visualizing spending trends, category breakdowns, and budget recommendations. The application also includes comprehensive model evaluation with metrics such as MAE, RMSE, MAPE, and Directional Accuracy, and is containerized using Docker for easy deployment and portability.
+**Budget Tool** is a personal finance management application built with Python and Streamlit. It helps users analyze spending, forecast expenses, and optimize budgets with AI/ML models.  
 
-The tool supports uploading CSV transaction files, automatically preprocessing the data, and splitting it into training, validation, and test sets. Users can explore their spending patterns through interactive charts, pie and bar visualizations, and time-based trends. Forecasting is dynamic with adjustable horizons, enabling predictions for the next 3–12 months. Budget recommendations highlight categories with overspending and provide actionable insights to optimize financial planning. The backend uses Python 3.9+ with libraries such as Pandas, NumPy, Scikit-learn, XGBoost, LightGBM, TensorFlow/Keras, and PyTorch, along with forecasting libraries like Prophet and Statsmodels (ARIMA). Interactive charts are rendered using Plotly, and configuration is managed through YAML files. Docker ensures portability and reproducibility of the environment.
+### Features
+- **Data Upload & Processing:** Upload CSV transaction files; automatic preprocessing and train/validation/test splits.  
+- **Exploratory Data Analysis (EDA):** Interactive charts for spending trends, category breakdowns, and time-based analysis.  
+- **Expense Forecasting:** Predict 3–12 month expenses using:
+  - Baseline models: Prophet, ARIMA  
+  - ML models: Random Forest, XGBoost, LightGBM  
+  - DL models: LSTM, GRU, Bi-LSTM, Transformers  
+- **Budget Recommendations:** AI-driven insights to reduce overspending and optimize financial planning.  
+- **Model Evaluation:** Metrics include MAE, RMSE, MAPE, and Directional Accuracy.  
+- **Deployment:** Dockerized for portability; Streamlit UI for easy interaction.  
 
-To set up, clone the repository using `git clone https://github.com/Shravinya/BudgetWise-AI-based-Expense-Forecasting-Tool.git`, create and activate a Python virtual environment, and install dependencies listed in `requirements.txt`, including Streamlit, Pandas, NumPy, Scikit-learn, XGBoost, LightGBM, TensorFlow, PyTorch, Prophet, Plotly, and PyYAML. Place the dataset `budgetwise_finance_dataset.csv` inside the `data/` folder and run the preprocessing, feature engineering, and modeling scripts sequentially (`data_ingestion.py`, `data_preprocessing.py`, `feature_engineering.py`, `baseline.py`, `ml_model.py`, `dl_model.py`, `transformers.py`, `budget_recommendation.py`, and `model_evaluation.py`). After processing, launch the Streamlit app with `streamlit run app.py` and navigate through the sidebar to upload data, view EDA visualizations, forecast expenses, and view budget recommendations.
+### Tech Stack
+- **Backend:** Python 3.9+, Pandas, NumPy, Scikit-learn, XGBoost, LightGBM, TensorFlow/Keras, PyTorch  
+- **Forecasting:** Prophet, Statsmodels (ARIMA)  
+- **Frontend:** Streamlit, Plotly  
+- **Utilities:** Logging, exceptions, YAML configuration  
+- **Deployment:** Docker  
 
-The project structure includes `app.py` for the Streamlit frontend, `config.yaml` for configuration, `Dockerfile` for containerization, `requirements.txt` for dependencies, a `data/` folder for raw datasets, an `artifacts/` folder for logs, models, and processed data, a `features/` folder for EDA outputs, `recommendations/` for CSV outputs of budget suggestions, and `src/` for source code including components for data processing, feature engineering, modeling, evaluation, and utilities such as logging and exception handling. Docker deployment is straightforward with `docker build` and `docker run` commands, and volumes ensure persistence of data and artifacts. Contributions are welcome via forking, creating a feature branch, committing changes, pushing to the branch, and opening a pull request. The project is licensed under the MIT License, with support available through GitHub Issues and Discussions. 
+### Setup Instructions
+1. **Clone Repository:**  
+   ```bash
+   git clone https://github.com/Shravinya/BudgetWise-AI-based-Expense-Forecasting-Tool.git
+   cd BudgetWise-AI-based-Expense-Forecasting-Tool
+   pip install -r requirements.txt
+   streamlit run app.py
 
-Budget Tool is designed for seamless personal finance management, combining advanced analytics, ML/DL forecasting, and interactive visualizations to empower users to understand, predict, and optimize their spending patterns efficiently.
