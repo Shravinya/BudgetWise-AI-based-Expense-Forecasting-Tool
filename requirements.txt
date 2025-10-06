@@ -1,0 +1,34 @@
+# Core
+pandas
+numpy
+matplotlib
+seaborn
+
+# Machine Learning
+scikit-learn
+xgboost
+lightgbm
+statsmodels
+
+# Deep Learning
+tensorflow
+
+# Forecasting
+prophet
+pystan==2.19.1.1
+
+# Visualization & Dashboard
+plotly
+streamlit
+
+# Advanced Models (Optional Excellence)
+torch
+transformers
+datasets
+pytorch-forecasting
+pytorch-lightning
+
+# Deployment & Utilities
+fastapi
+uvicorn
+joblib
