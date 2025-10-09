@@ -1,49 +1,17 @@
 # 💰 Budget Tool
 
-**Budget Tool** is a personal finance management application built with Python and Streamlit. It helps users analyze spending, forecast expenses, and optimize budgets with AI/ML models.  
-
-### Features
-- **Data Upload & Processing:** Upload CSV transaction files; automatic preprocessing and train/validation/test splits.  
-- **Exploratory Data Analysis (EDA):** Interactive charts for spending trends, category breakdowns, and time-based analysis.  
-- **Expense Forecasting:** Predict 3–12 month expenses using:
-  - Baseline models: Prophet, ARIMA  
-  - ML models: Random Forest, XGBoost, LightGBM  
-  - DL models: LSTM, GRU, Bi-LSTM, Transformers  
-- **Budget Recommendations:** AI-driven insights to reduce overspending and optimize financial planning.  
-- **Model Evaluation:** Metrics include MAE, RMSE, MAPE, and Directional Accuracy.  
-- **Deployment:** Dockerized for portability; Streamlit UI for easy interaction.  
-
-### Tech Stack
-- **Backend:** Python 3.9+, Pandas, NumPy, Scikit-learn, XGBoost, LightGBM, TensorFlow/Keras, PyTorch  
-- **Forecasting:** Prophet, Statsmodels (ARIMA)  
-- **Frontend:** Streamlit, Plotly  
-- **Utilities:** Logging, exceptions, YAML configuration  
-- **Deployment:** Docker  
-
-### Setup Instructions
-1. **Clone Repository:**  
-   ```bash
-   git clone https://github.com/Shravinya/BudgetWise-AI-based-Expense-Forecasting-Tool.git
-   cd BudgetWise-AI-based-Expense-Forecasting-Tool
-   pip install -r requirements.txt
-   streamlit run app.py
-
-
-
-
-
-# 💰 Budget Tool MVP
-
-AI-Powered Expense Forecasting & Budget Optimization
+**AI-Powered Expense Forecasting & Budget Optimization**
 
 ---
 
 ## 🚀 Overview
-Budget Tool MVP is an end-to-end solution for personal finance management, expense forecasting, and budget recommendations. It leverages machine learning, deep learning, and time series models to analyze your transaction data and provide actionable insights via an interactive dashboard.
+
+Budget Tool is a personal finance management application built with Python and Streamlit. It helps users analyze spending, forecast expenses, and optimize budgets using state-of-the-art AI/ML models. The tool supports multi-source data ingestion, advanced analytics, and actionable recommendations, all accessible via an interactive dashboard.
 
 ---
 
 ## 📦 Project Structure
+
 ```
 ├── app.py                        # Streamlit dashboard
 ├── config.yaml                   # Configuration file
@@ -67,18 +35,21 @@ Budget Tool MVP is an end-to-end solution for personal finance management, expen
 ---
 
 ## ✨ Key Highlights & Features
+
 - **Automated Data Ingestion & Preprocessing**
-- **Feature Engineering**: Lag features, rolling averages, ratios, external indicators
-- **Baseline, ML, DL, and Advanced Time Series Models**: Linear Regression, ARIMA, Prophet, Random Forest, XGBoost, LightGBM, LSTM, GRU, Bi-LSTM, Transformers
-- **Enhanced Evaluation Framework**: MAE, RMSE, MAPE, Directional Accuracy, category-wise validation
-- **Budget Recommendations**: Actionable suggestions to optimize spending
-- **Interactive Streamlit Dashboard**: Upload CSV, visualize EDA, trends, forecasts, recommendations
-- **Quickstart & Setup Automation**: One-command setup and run
-- **Extensible & Modular Codebase**: Easy to add new models, features, or data sources
+- **Feature Engineering:** Lag features, rolling averages, ratios, external indicators
+- **Comprehensive Modeling:** Linear Regression, ARIMA, Prophet, Random Forest, XGBoost, LightGBM, LSTM, GRU, Bi-LSTM, Transformers
+- **Enhanced Evaluation Framework:** MAE, RMSE, MAPE, Directional Accuracy, category-wise validation
+- **Budget Recommendations:** Actionable insights to optimize spending
+- **Interactive Streamlit Dashboard:** Upload CSV, visualize EDA, trends, forecasts, recommendations
+- **Quickstart & Setup Automation:** One-command setup and run
+- **Extensible & Modular Codebase:** Easily add new models, features, or data sources
+- **Dockerized Deployment:** For portability and cloud hosting
 
 ---
 
 ## 🧠 Capabilities
+
 - Multi-source data ingestion (bank, UPI, wallet, Kaggle)
 - Unified transaction dataset: `user_id`, `date`, `category`, `merchant`, `amount`, `income/expense`, `demographics`
 - Outlier handling, missing value imputation, currency normalization
@@ -91,46 +62,57 @@ Budget Tool MVP is an end-to-end solution for personal finance management, expen
 ---
 
 ## 🏗️ Machine Learning Pipeline
-- **Data Ingestion**: `src/components/data_ingestion.py`
-- **Preprocessing**: `src/components/data_preprocessing.py`
-- **Feature Engineering**: `src/components/feature_engineering.py`
-- **Model Training**: `src/pipelines/model_pipeline.py`
-- **Evaluation**: `src/evaluation/model_evaluation.py`
-- **Recommendations**: `src/components/budget_recommendation.py`
+
+- **Data Ingestion:** `src/components/data_ingestion.py`
+- **Preprocessing:** `src/components/data_preprocessing.py`
+- **Feature Engineering:** `src/components/feature_engineering.py`
+- **Model Training:** `src/pipelines/model_pipeline.py`
+- **Evaluation:** `src/evaluation/model_evaluation.py`
+- **Recommendations:** `src/components/budget_recommendation.py`
 
 ---
 
 ## 📊 Enhanced Evaluation Framework
-- Supports multiple metrics: MAE, RMSE, MAPE, Directional Accuracy
+
+- Multiple metrics: MAE, RMSE, MAPE, Directional Accuracy
 - Category-wise and time-wise validation
 - Logs and results saved in `artifacts/logs/` and `artifacts/evaluation_results.csv`
 
 ---
 
 ## 🖥️ Interactive Dashboard Features
+
 - File upload (CSV/Excel)
 - EDA: Pie/bar charts, monthly/weekly trends
-- Forecast visualization: Line charts, next 3-month prediction
+- Forecast visualization: Line charts, next 3–12 month prediction
 - Budget recommendations: Actionable tips (e.g., "Reduce dining by 10% to save ₹X")
 - Model comparison and performance summary
 
 ---
 
 ## 🛠️ Tech Stack
-- **Backend**: Python 3.9+, pandas, numpy, scikit-learn, xgboost, lightgbm, tensorflow, prophet, torch
-- **Frontend**: Streamlit
-- **Visualization**: matplotlib, seaborn, plotly
-- **Deployment**: Docker, Streamlit Cloud, Heroku, AWS (optional)
+
+- **Backend:** Python 3.9+, Pandas, NumPy, Scikit-learn, XGBoost, LightGBM, TensorFlow/Keras, PyTorch, Prophet, Statsmodels (ARIMA)
+- **Frontend:** Streamlit, Plotly, Matplotlib, Seaborn
+- **Utilities:** Logging, exceptions, YAML configuration
+- **Deployment:** Docker, Streamlit Cloud, Heroku, AWS (optional)
 
 ---
 
 ## ⚡ Quickstart
+
 1. **Clone the repository**
    ```sh
-   git clone <your-repo-url>
-   cd budget_tool
+   git clone https://github.com/Shravinya/BudgetWise-AI-based-Expense-Forecasting-Tool.git
+   cd BudgetWise-AI-based-Expense-Forecasting-Tool
    ```
-2. **Run setup script**
+
+2. **Install dependencies**
+   ```sh
+   pip install -r requirements.txt
+   ```
+
+3. **Run setup script**
    ```sh
    python setup.py --install-all
    ```
@@ -140,7 +122,7 @@ Budget Tool MVP is an end-to-end solution for personal finance management, expen
    - Runs initial data processing
    - Generates quick_start.py
 
-3. **Quick Start (Recommended)**
+4. **Quick Start (Recommended)**
    ```sh
    python quick_start.py
    ```
@@ -148,13 +130,10 @@ Budget Tool MVP is an end-to-end solution for personal finance management, expen
    - Evaluates models
    - Launches Streamlit dashboard
 
-4. **Manual Steps**
-   - Add your data to `data/`
-   - Run ingestion, preprocessing, feature engineering, recommendations, model training, evaluation as needed
-
 ---
 
 ## 🏃 Installation & Commands
+
 - **Install dependencies only**
   ```sh
   python setup.py --skip-data
@@ -193,6 +172,7 @@ Budget Tool MVP is an end-to-end solution for personal finance management, expen
 ---
 
 ## 📖 Application Usage Guide
+
 1. **Add your transaction data**
    - Place CSV files in `data/` directory
    - Required columns: `date`, `amount`, `category`, `transaction_type`
@@ -212,6 +192,7 @@ Budget Tool MVP is an end-to-end solution for personal finance management, expen
 ---
 
 ## 📚 Documentation & Support
+
 - See `README.md` and `config.yaml` for full documentation
 - For issues, check logs or open a GitHub issue
 - Contributions welcome!
@@ -219,6 +200,7 @@ Budget Tool MVP is an end-to-end solution for personal finance management, expen
 ---
 
 ## 🎯 Future Enhancements
+
 - Real-time data integration
 - Anomaly detection
 - Multi-user support
